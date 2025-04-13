@@ -7,6 +7,10 @@ on:
   pull_request:
     types: [opened, synchronize, reopened, ready_for_review]
 
+env:
+  DATABASE_URL: sqlite:///./test.db
+  X_TOKEN: 1234
+
 jobs:
   # quality:
   #   runs-on: ubuntu-latest
