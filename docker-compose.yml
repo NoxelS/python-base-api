@@ -1,0 +1,16 @@
+services:
+  project_slug:
+    build: .
+    volumes:
+      - "/opt/project_slug:/mnt"
+    ports:
+      - "8001:8001"
+    environment:
+      - "DATABASE_URL=sqlite:////mnt/project_slug.db"
+      - "X-TOKEN=${X_TOKEN}"
+    networks:
+      - "project_slug_network"
+
+networks:
+  project_slug_network:
+    driver: bridge
