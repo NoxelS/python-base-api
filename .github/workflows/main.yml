@@ -9,7 +9,7 @@ on:
 
 env:
   DATABASE_URL: sqlite:///./test.db
-  X_TOKEN: 1234
+  X_TOKEN: 1234 # Since this is a local test, we can use a dummy token
 
 jobs:
   # quality:
